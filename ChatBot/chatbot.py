@@ -30,4 +30,11 @@ What is the latest generation of intel processors?
 4. Sandy Bridge
 """)
 
-
+def answers(new_answer):
+    answer = int(input())
+    if answer == 2:
+        print("Congratulations, have a nice day!")
+    else:
+        print("Please, try again.")
+        answers("1")
+answers("2")
