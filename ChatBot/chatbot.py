@@ -14,3 +14,20 @@ remainder5 = int(input())
 remainder7 = int(input())
 age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105
 print("Your age is " + str(age) + "; that's a good time to start programming!")
+
+print("Now I will prove to you that I can count to any number you want.")
+your_num = int(input())
+for i in range(your_num):
+    print(i, end="! \n")
+print("Completed, have a nice day!")
+
+print("Let's test your programming knowledge.")
+print("""
+What is the latest generation of intel processors?
+1. Comet Lake-S
+2. Rocket Lake-S
+3. Coffee lake-S
+4. Sandy Bridge
+""")
+
+
