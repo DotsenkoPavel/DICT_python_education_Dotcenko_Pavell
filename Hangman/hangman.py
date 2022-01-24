@@ -26,3 +26,24 @@ def double():
         index = word_list.index(answer_user)
         user_list[index] = answer_user
         word_list[index] = '-'
+
+def exam():
+    global count, answer_user, user_list, user_used, word_list
+    if answer_user in user_used:
+        print("You've already guessed this letter")
+        count -= 1
+    elif answer_user in word_list:
+        double()
+        index = word_list.index(answer_user)
+        user_list[index] = answer_user
+        count -= 1
+    elif answer_user not in english_letters:
+        print("Please enter a lowercase English letter")
+        count -= 1
+    elif len(answer_user) >= 2:
+        print("You should input a single letter")
+        count -= 1
+    elif answer_user not in (user_used and word_list):
+        print("That letter doesn't appear in the word")
+    else:
+        user_used.append(answer_user)
