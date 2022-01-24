@@ -19,3 +19,10 @@ def res():
         print("You guessed the word!")
         print("You survived!")
     start = str(input('Type "play" to play the game, "exit" to quit:'))
+
+def double():
+    global word_list, answer_user, user_list
+    if word_list.count(answer_user) >= 2:
+        index = word_list.index(answer_user)
+        user_list[index] = answer_user
+        word_list[index] = '-'
