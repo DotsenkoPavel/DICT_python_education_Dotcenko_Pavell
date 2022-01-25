@@ -49,3 +49,21 @@ def exam():
         print("That letter doesn't appear in the word")
     else:
         user_used.append(answer_user)
+
+while start != 'exit':
+    if start == "play":
+        count = 0
+        answer_prog = random.choice(words)  # python
+        word_list = list(answer_prog)  # [p,y,t,h,o,n]
+        user_word_list_null = "-" * len(answer_prog)  # ------
+        user_used = []    # [-,-,-,-,-,-]
+        user_list = list(user_word_list_null)
+        print(user_word_list_null)
+        while count != 8:
+            answer_user = str(input('Input a letter:'))
+            exam()
+            count += 1
+            print(''.join(user_list))
+        word_list = list(answer_prog)
+        res()
+    start = str(input('Type "play" to play the game, "exit" to quit: '))
